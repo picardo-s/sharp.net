@@ -1,3 +1,9 @@
-﻿Console.WriteLine($"int uses {sizeof(int)} bytes and can store numbers in the range {int.MinValue:N0} to {int.MaxValue:N0}.");
-Console.WriteLine($"double uses {sizeof(double)} bytes and can store numbers in the range {double.MinValue:N0} to {double.MaxValue:N0}.");
-Console.WriteLine($"decimal uses {sizeof(decimal)} bytes and can store numbers in the range {decimal.MinValue:N0} to {decimal.MaxValue:N0}.");
+﻿Console.WriteLine("Press any key combination: ");
+
+ConsoleKeyInfo key;
+do
+{
+    key = ReadKey();
+    Console.WriteLine();
+    Console.WriteLine("Key: {0}, Char: {1}, Modifiers: {2}", key.Key, key.KeyChar, key.Modifiers);
+}while(key.KeyChar != 'X');

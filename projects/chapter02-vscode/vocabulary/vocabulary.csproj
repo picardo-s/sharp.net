@@ -10,6 +10,7 @@
   <ItemGroup>
     <Using Remove="System.Threading" />
     <Using Include="System.Numerics" />
+    <Using Include="System.Console" Static="true" />
   </ItemGroup>
 
 </Project>
