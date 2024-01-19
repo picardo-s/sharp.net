@@ -1,15 +1,15 @@
-﻿string[,] grid1 = new[,]
+﻿try
 {
-    { "Alpha", "Beta", "Gamma", "Delta" },
-    { "Anne", "Ben", "Charlie", "Doug" },
-    { "Aardvark", "Bear", "Cat", "Dog" }
-};
+    Console.WriteLine("Enter a number [0, 255]: ");
+    string? firstNum = ReadLine();
 
-WriteLine("{0} {1} {2} {3}",
-    grid1.GetLowerBound(0),
-    grid1.GetUpperBound(0),
-    grid1.GetLowerBound(1),
-    grid1.GetUpperBound(1)
-);
+    Console.WriteLine("Enter another number [0, 255]: ");
+    string? secondNum = ReadLine();
 
-WriteLine(grid1[0,0]);
+    byte result = (byte)(byte.Parse(firstNum!)/byte.Parse(secondNum!));
+    WriteLine($"{firstNum} divided by {secondNum} is {result}");
+}
+catch(System.Exception ex)
+{
+    WriteLine($"{ex.GetType()}: {ex.Message}.");
+}
