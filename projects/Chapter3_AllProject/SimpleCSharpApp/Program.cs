@@ -1,14 +1,7 @@
-﻿//Display a simple message to the user
-Console.WriteLine("***** My First (no) C# App *****");
-Console.WriteLine();
-
-Console.ReadLine();
-
-string[] theArgs = Environment.GetCommandLineArgs();
-
-foreach(string arg in theArgs)
+﻿foreach (string drive in Environment.GetLogicalDrives())
 {
-    Console.WriteLine($"Arg: {arg}");
+    Console.WriteLine($"Drive: {drive}");
 }
 
-return -1;
+Console.WriteLine($"OS: {Environment.OSVersion}");
+Console.WriteLine($"Number of processors: {Environment.ProcessorCount}");
